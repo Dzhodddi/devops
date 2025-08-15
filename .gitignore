@@ -1,0 +1,12 @@
+bin/
+docs/
+terraform/
+.env
+web-src/node_modules
+web-src/.gitignore
+web-src/.dockerignore
+web-src/src/vite-env.d.ts
+web-src/public
+web-src/src/assets
+.idea/
+pgdata

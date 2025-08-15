@@ -1,0 +1,1 @@
+ALTER TABLE posts ADD COLUMN image VARCHAR(100) DEFAULT 'vite.svg'
