@@ -8,7 +8,6 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 	echoSwagger "github.com/swaggo/echo-swagger"
 	"go.uber.org/zap"
-	"log"
 	"net/http"
 	"time"
 )
@@ -36,7 +35,6 @@ func (app *application) run(mux http.Handler) error {
 	docs.SwaggerInfo.Version = version
 	docs.SwaggerInfo.Host = app.config.addr
 	docs.SwaggerInfo.BasePath = "/v1"
-	log.Printf(docs.SwaggerInfo.Host)
 	srv := echo.New()
 	srv.Any("/*", echo.WrapHandler(mux))
 	err := srv.Start(app.config.addr)
