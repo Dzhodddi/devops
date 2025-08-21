@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'terraform-agent' }
+  agent any
 
 /*   environment {
     TF_DIR = 'terraform'
