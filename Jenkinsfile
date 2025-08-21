@@ -1,7 +1,7 @@
 pipeline {
   agent { label 'terraform-agent' }
 
-  environment {
+/*   environment {
     TF_DIR = 'terraform'
     TF_STATE_DIR = '/terraform_state'
   }
@@ -55,6 +55,11 @@ pipeline {
     }
     failure {
       echo 'Pipeline failed!'
+    }
+  } */
+  stage {
+    steps {
+        sh "echo hello world"
     }
   }
 }
