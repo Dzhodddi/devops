@@ -40,7 +40,7 @@ pipeline {
       steps {
         echo 'Deploying with Terraform...'
         dir("${TF_DIR}") {
-          sh """terraform init -backend-config="path=${TF_STATE_DIR}/terraform.tfstate""""
+          sh "terraform init -backend-config=path=${TF_STATE_DIR}/terraform.tfstate"
           sh 'terraform plan -out=tfplan'
           sh 'terraform apply -auto-approve tfplan'
         }
