@@ -57,7 +57,7 @@ pipeline {
       echo 'Pipeline failed!'
     }
   } */
-  stage {
+  stage('Hello') {
     steps {
         sh "echo hello world"
     }
