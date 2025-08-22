@@ -1,6 +1,5 @@
 bin/
-docs/
-terraform/
+
 .env
 web-src/node_modules
 web-src/.gitignore
@@ -10,3 +9,10 @@ web-src/public
 web-src/src/assets
 .idea/
 pgdata
+/terraform/.terraform
+/terraform/jenkins
+/terraform/jenkins_home
+/terraform/variables.tf
+/terraform/terraform.tfstate
+/terraform/terraform.tfstate.backup
+/terraform/.terraform.lock.hcl
