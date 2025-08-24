@@ -5,7 +5,10 @@ resource "docker_image" "postgres" {
 
 resource "docker_network" "app_network" {
   name = "app_network"
+}
 
+resource "docker_network" "jenkins_network" {
+  name = "jenkins_network"
 }
 
 resource "docker_container" "postgres" {
@@ -121,6 +124,6 @@ resource "docker_container" "jenkins_master" {
 
   restart = "always"
   networks_advanced {
-    name = docker_network.app_network.name
+    name = docker_network.jenkins_network.name
   }
 }
