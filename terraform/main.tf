@@ -54,8 +54,8 @@ resource "docker_container" "app" {
   env = [
     "email=${var.email}",
     "ENV=development",
-    "HTTP_ADDR=0.0.0.0:3000",
-    "API_URL=0.0.0.0:3000",
+    "HTTP_ADDR=0.0.0.0:3001",
+    "API_URL=0.0.0.0:3001",
     "POSTGRES_USER=${var.postgres_user}",
     "POSTGRES_PASSWORD=${var.postgres_password}",
     "POSTGRES_DB=${var.postgres_db}",
@@ -64,8 +64,8 @@ resource "docker_container" "app" {
     "DB_ADDR=postgres://${var.postgres_user}:${var.postgres_password}@${docker_container.postgres.name}:5432/${var.postgres_db}?sslmode=disable"
   ]
   ports {
-    internal = 3000
-    external = 3000
+    internal = 3001
+    external = 3001
   }
 
   command = [

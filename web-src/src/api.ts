@@ -1,6 +1,6 @@
 import type { Post, CreatePostPayload, EditPostPayload } from "./types";
 
-const API_URL = "http://localhost:3000/v1/post";
+const API_URL = "http://localhost:3001/v1/post";
 
 export async function getPosts(): Promise<Post[]> {
     const res = await fetch(API_URL, {headers: {Accept: "application/json"}});

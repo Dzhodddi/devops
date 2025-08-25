@@ -13,4 +13,4 @@ WORKDIR /app
 COPY --from=builder /app/devops .
 CMD ["./devops"]
 
-EXPOSE 3000
+EXPOSE 3001

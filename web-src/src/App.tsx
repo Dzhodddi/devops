@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getPosts, createPost, updatePost, deletePost } from "./api";
 import type { Post } from "./types";
 
-const path = "http://localhost:3000/public";
+const path = "http://localhost:3001/public";
 
 const App: React.FC = () => {
     const [posts, setPosts] = useState<Post[]>([]);
